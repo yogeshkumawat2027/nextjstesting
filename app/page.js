@@ -1,9 +1,14 @@
-import Image from "next/image";
+'use client'
+import { useRouter } from "next/navigation";
 
 export default function Home() {
+  const router = useRouter();
+  let clickhandle = ()=>{
+       router.push("/careers/ips");
+  }
   return (
    <>
-   <h1>Hello World</h1>
+  <button onClick={clickhandle}>Click me</button>
    </>
   );
 }
